@@ -1,6 +1,9 @@
+import { onBoardUser } from "@/modules/auth/actions";
 import React from "react";
 
-const Layout = async ({ children }) => {
+const Layout = async ({ children }) => { 
+  await onBoardUser();
+
   return (
     <main className="flex flex-col min-h-screen relative overflow-x-hidden">
       {/* Background */}
